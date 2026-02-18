@@ -1,42 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const activities = [
-  {
-    title: 'Running',
-    description: 'Training for a half marathon with my girlfriend. We run around Somerville and the Charles River. Still working on getting faster, but at least I show up.',
-    link: '#', // Strava link goes here
-    linkText: 'Strava (coming soon)',
-  },
-  {
-    title: 'Skiing',
-    description: 'Ikon Pass holder. Waterville Valley, Loon, Mount Snow, and wherever the snow is best that weekend. Went out to Brighton Resort in Utah last season.',
-  },
-  {
-    title: 'Scuba Diving',
-    description: 'Advanced NAUI certified. There is something about being 80 feet underwater that completely resets your brain.',
-  },
-  {
-    title: 'Dodgeball',
-    description: 'Volo Sports league in the city. It is exactly as fun and chaotic as it sounds.',
-  },
-  {
-    title: 'Go-Kart Racing',
-    description: 'K1 Speed adult league. The fastest way to feel like a Formula 1 driver without any of the talent or money.',
-  },
-  {
-    title: 'Hiking and Camping',
-    description: 'Acadia is the go-to. Northeast trails mostly, with the occasional trip out west. AllTrails and Gaia GPS on every hike.',
-  },
-];
-
-const hobbies = [
-  '3D printing (built my own CoreXY)',
-  'Electronics and PCB design',
-  'Knife collecting',
-  'Quilting and sewing',
-  'Music — Caamp, Mt. Joy, Rainbow Kitten Surprise, Band of Horses',
-];
 ---
 
 <BaseLayout title="Adventures - Bradley Spillert">
@@ -47,33 +10,104 @@ const hobbies = [
         Engineering is the day job. The rest of the time I'm usually outside, underwater, or building something that has nothing to do with software.
       </p>
 
-      <div class="grid md:grid-cols-2 gap-6 mb-20">
-        {activities.map((activity) => (
-          <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden">
-            <div class="placeholder-image h-44">
+      <!-- Mixed layout activities -->
+      <div class="grid md:grid-cols-3 gap-6 mb-20">
+        <!-- Running - wide -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden md:col-span-2">
+          <div class="placeholder-image h-52">
+            <span>Photo coming soon</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">Running</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Training for a half marathon with my girlfriend. We run around Somerville and the Charles River. Still working on getting faster, but at least I show up.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skiing - tall -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden">
+          <div class="placeholder-image h-40">
+            <span>Photo coming soon</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">Skiing</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <a href="https://www.ikonpass.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Ikon Pass</a> holder. <a href="https://www.waterville.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Waterville Valley</a>, Loon, Mount Snow, and wherever the snow is best that weekend. Went out to Brighton Resort in Utah last season.
+            </p>
+          </div>
+        </div>
+
+        <!-- Scuba -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden">
+          <div class="placeholder-image h-36">
+            <span>Photo coming soon</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">Scuba Diving</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Advanced <a href="https://www.naui.org" target="_blank" rel="noopener" class="text-gray-300 hover:underline">NAUI</a> certified. There is something about being 80 feet underwater that completely resets your brain.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hiking - wide -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden md:col-span-2">
+          <div class="md:flex">
+            <div class="placeholder-image h-44 md:h-auto md:w-64 shrink-0">
               <span>Photo coming soon</span>
             </div>
             <div class="p-6">
-              <h3 class="text-white text-lg font-semibold mb-2">{activity.title}</h3>
-              <p class="text-gray-400 text-sm leading-relaxed">{activity.description}</p>
-              {activity.link && (
-                <a href={activity.link} class="inline-block mt-3 text-accent text-xs hover:underline">{activity.linkText}</a>
-              )}
+              <h3 class="text-white text-lg font-semibold mb-2">Hiking and Camping</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                <a href="https://www.nps.gov/acad/" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Acadia</a> is the go-to. Northeast trails mostly, with the occasional trip out west. <a href="https://www.alltrails.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">AllTrails</a> and <a href="https://www.gaiagps.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Gaia GPS</a> on every hike.
+              </p>
             </div>
           </div>
-        ))}
+        </div>
+
+        <!-- Dodgeball -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden md:col-span-2">
+          <div class="p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">Dodgeball</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <a href="https://www.volosports.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Volo Sports</a> league in the city. It is exactly as fun and chaotic as it sounds.
+            </p>
+          </div>
+        </div>
+
+        <!-- Go-Kart -->
+        <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden">
+          <div class="p-6">
+            <h3 class="text-white text-lg font-semibold mb-2">Go-Kart Racing</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              <a href="https://www.k1speed.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">K1 Speed</a> adult league. The fastest way to feel like a Formula 1 driver without any of the talent or money.
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Other hobbies -->
+      <div class="fade-in mb-16">
+        <h2 class="text-2xl font-semibold text-white mb-6">Other Things I Do</h2>
+        <ul class="space-y-2 text-gray-400 text-sm max-w-lg">
+          <li>3D printing (built my own CoreXY)</li>
+          <li>Electronics and PCB design</li>
+          <li>Knife collecting</li>
+          <li>Quilting and sewing (yes, really)</li>
+        </ul>
+      </div>
+
+      <!-- Music -->
       <div class="fade-in">
-        <h2 class="text-2xl font-semibold text-white mb-8">Other Things I Do</h2>
-        <div class="flex flex-wrap gap-3">
-          {hobbies.map((hobby) => (
-            <span class="px-4 py-2 bg-surface-raised border border-gray-800 rounded-lg text-sm text-gray-400">
-              {hobby}
-            </span>
-          ))}
-        </div>
+        <h2 class="text-2xl font-semibold text-white mb-4">On Repeat</h2>
+        <p class="text-gray-400 text-sm leading-relaxed max-w-lg">
+          <a href="https://open.spotify.com/artist/3rMFotuRYPOmFVQJRVqagf" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Caamp</a>, 
+          <a href="https://open.spotify.com/artist/69tiO1fG8VWduDl3ji2qhI" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Mt. Joy</a>, 
+          <a href="https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Rainbow Kitten Surprise</a>, 
+          <a href="https://open.spotify.com/artist/0OdUWJ0sBjDrqHygGUXeCF" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Band of Horses</a> — 
+          that kind of thing.
+        </p>
       </div>
     </div>
   </section>

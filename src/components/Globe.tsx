@@ -8,7 +8,14 @@ interface Location {
   note: string;
 }
 
-const locations: Location[] = [
+interface LocationExt extends Location {
+  isHome?: boolean;
+}
+
+const locations: LocationExt[] = [
+  { name: 'Somerville, MA', lat: 42.39, lng: -71.10, note: 'Home', isHome: true },
+  { name: 'Boston, MA', lat: 42.36, lng: -71.06, note: 'Home base', isHome: true },
+  { name: 'Reading, MA', lat: 42.53, lng: -71.10, note: 'Hometown', isHome: true },
   { name: 'Santiago, Chile', lat: -33.45, lng: -70.67, note: 'Photos coming soon' },
   { name: 'Antigua, Guatemala', lat: 14.56, lng: -90.73, note: 'Photos coming soon' },
   { name: 'London, England', lat: 51.51, lng: -0.13, note: 'Photos coming soon' },
@@ -16,7 +23,9 @@ const locations: Location[] = [
   { name: 'San Diego, CA', lat: 32.72, lng: -117.16, note: 'Photos coming soon' },
   { name: 'Salt Lake City, Utah', lat: 40.76, lng: -111.89, note: 'Brighton Resort' },
   { name: 'Acadia, Maine', lat: 44.35, lng: -68.21, note: 'Photos coming soon' },
-  // Add more locations here — just add to this array
+  { name: 'New York City', lat: 40.71, lng: -74.01, note: 'Photos coming soon' },
+  { name: 'Atacama Desert, Chile', lat: -23.86, lng: -69.13, note: 'Photos coming soon' },
+  { name: 'Patagonia', lat: -49.30, lng: -72.30, note: 'Photos coming soon' },
 ];
 
 function latLngToVector3(lat: number, lng: number, radius: number): THREE.Vector3 {
@@ -108,7 +117,8 @@ export default function Globe() {
 
       // Glowing marker
       const markerGeo = new THREE.SphereGeometry(0.02, 16, 16);
-      const markerMat = new THREE.MeshBasicMaterial({ color: 0xc8a87c });
+      const markerColor = (loc as LocationExt).isHome ? 0xffffff : 0xc8a87c;
+      const markerMat = new THREE.MeshBasicMaterial({ color: markerColor });
       const marker = new THREE.Mesh(markerGeo, markerMat);
       marker.position.copy(pos);
       marker.userData = loc;
@@ -118,7 +128,7 @@ export default function Globe() {
       // Outer glow ring
       const ringGeo = new THREE.RingGeometry(0.03, 0.045, 32);
       const ringMat = new THREE.MeshBasicMaterial({
-        color: 0xc8a87c,
+        color: markerColor,
         transparent: true,
         opacity: 0.4,
         side: THREE.DoubleSide,

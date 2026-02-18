@@ -16,6 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
           Drones, industrial robots, X-ray scanners — if it has a microcontroller and does something interesting in the real world, that's where I want to be.
         </p>
+        <p class="text-gray-600 text-sm mt-3">Based in Somerville, MA</p>
       </div>
       <div class="flex gap-4 mt-8 fade-in">
         <a href="https://github.com/spillertb" target="_blank" rel="noopener"
@@ -42,10 +43,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="section-heading">About</h2>
           <div class="space-y-4 text-gray-400 leading-relaxed">
             <p>
-              I spent the last four-plus years at Lumafield as a technical lead on their embedded software team, building industrial X-ray CT scanners from the ground up. Device drivers, motion controllers, scientific cameras, image acquisition pipelines — the full stack of getting complex hardware to work reliably.
+              I spent the last four-plus years at <a href="https://www.lumafield.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Lumafield</a> as a technical lead on their embedded software team, building industrial X-ray CT scanners from the ground up. Device drivers, motion controllers, scientific cameras, image acquisition pipelines — the full stack of getting complex hardware to work reliably.
             </p>
             <p>
-              Before that, I worked on utility-scale wind and battery energy storage at Enel Green Power, automating controls for a 1 GW hybrid facility.
+              Before that, I worked on utility-scale wind and battery energy storage at <a href="https://www.enelgreenpower.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Enel Green Power</a>, automating controls for a 1 GW hybrid facility.
             </p>
             <p>
               Right now I'm building open-source flight control software for drones, training for a half marathon, and looking for the next thing worth building.
@@ -73,24 +74,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Currently -->
-  <section class="py-20 px-6 bg-surface-raised">
+  <section class="py-16 px-6 bg-surface-raised">
     <div class="max-w-6xl mx-auto">
       <h2 class="section-heading fade-in">Currently</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="fade-in p-6 rounded-xl border border-gray-800 bg-surface">
-          <h3 class="text-white font-medium mb-2">Building</h3>
+      <div class="space-y-4 max-w-2xl">
+        <div class="fade-in flex items-baseline gap-4 py-3 border-b border-gray-800/50">
+          <span class="text-gray-500 text-sm shrink-0 w-24">Building</span>
           <p class="text-gray-400 text-sm leading-relaxed">
-            <a href="https://github.com/spillertb/flight-software" target="_blank" rel="noopener" class="text-accent hover:underline">flight-software</a> — an open source ground control station for ArduPilot drones. React, TypeScript, CesiumJS.
+            <a href="https://github.com/spillertb/flight-software" target="_blank" rel="noopener" class="text-accent hover:underline">flight-software</a> — an open source ground control station for <a href="https://ardupilot.org" target="_blank" rel="noopener" class="text-gray-300 hover:underline">ArduPilot</a> drones. React, TypeScript, CesiumJS.
           </p>
         </div>
-        <div class="fade-in p-6 rounded-xl border border-gray-800 bg-surface">
-          <h3 class="text-white font-medium mb-2">Training</h3>
+        <div class="fade-in flex items-baseline gap-4 py-3 border-b border-gray-800/50">
+          <span class="text-gray-500 text-sm shrink-0 w-24">Training</span>
           <p class="text-gray-400 text-sm leading-relaxed">
             Half marathon prep. Slowly getting faster, mostly just trying not to injure myself.
           </p>
         </div>
-        <div class="fade-in p-6 rounded-xl border border-gray-800 bg-surface">
-          <h3 class="text-white font-medium mb-2">Open to Work</h3>
+        <div class="fade-in flex items-baseline gap-4 py-3">
+          <span class="text-gray-500 text-sm shrink-0 w-24">Open to work</span>
           <p class="text-gray-400 text-sm leading-relaxed">
             Looking for my next role — embedded systems, robotics, autonomy, anything where software meets the physical world.
             <a href="mailto:bradleyspillert@gmail.com" class="text-accent hover:underline ml-1">Reach out</a>
