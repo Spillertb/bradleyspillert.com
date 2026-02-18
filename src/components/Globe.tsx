@@ -47,15 +47,22 @@ export default function Globe() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    // Globe
+    // Globe with Earth texture
     const globeGeometry = new THREE.SphereGeometry(1, 64, 64);
+    const textureLoader = new THREE.TextureLoader();
+    const earthTexture = textureLoader.load(
+      'https://unpkg.com/three-globe@2.41.12/example/img/earth-blue-marble.jpg',
+      () => { renderer.render(scene, camera); }
+    );
+    const bumpMap = textureLoader.load(
+      'https://unpkg.com/three-globe@2.41.12/example/img/earth-topology.png'
+    );
     const globeMaterial = new THREE.MeshPhongMaterial({
-      color: 0x1a1a2e,
-      emissive: 0x0a0a15,
+      map: earthTexture,
+      bumpMap: bumpMap,
+      bumpScale: 0.03,
       specular: 0x333355,
-      shininess: 25,
-      transparent: true,
-      opacity: 0.9,
+      shininess: 15,
     });
     const globe = new THREE.Mesh(globeGeometry, globeMaterial);
     scene.add(globe);
