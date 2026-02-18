@@ -4,32 +4,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const experience = [
   {
     company: 'Lumafield',
+    location: 'Cambridge, MA',
     role: 'Sr Software Engineer',
     period: 'Aug 2021 - Apr 2026',
     progression: 'Mechatronics Engineer → Embedded Software Engineer → Sr Software Engineer',
-    description: 'Technical lead for embedded software on industrial X-ray CT scanners. Built the software that controls these machines — device drivers, motion controllers, scientific cameras, sensors, X-ray generators. Wrote image acquisition pipelines with OpenCV, STM32 firmware, and worked on custom PCB designs.',
+    description: 'Joined as the company\'s first mechatronics hire and grew into the technical lead for embedded software. Worked on both the Neptune and Triton X-ray CT scanner platforms from early prototype through full production. The job was everything from writing device drivers to standing up a manufacturing line.',
     details: [
-      'Designed and maintained device drivers for scientific cameras, X-ray generators, motion stages, and environmental sensors',
-      'Built image acquisition and processing pipelines using OpenCV and custom algorithms',
-      'Developed STM32 firmware for custom control boards',
-      'Helped establish the first manufacturing facility and shipped hundreds of scanners',
-      'Python, C/C++, Linux — the usual embedded stack',
+      'Led embedded software development across two scanner platforms (Neptune and Triton) — from breadboard prototypes to shipping production units',
+      'Wrote and maintained drivers and APIs for motion controllers, scientific X-ray cameras, high-voltage generators, and environmental sensors (Python, C/C++)',
+      'Built image acquisition and processing pipelines that run the actual CT scans — frame capture, reconstruction preprocessing, and quality validation (OpenCV, NumPy)',
+      'Developed STM32 firmware in C for custom control PCBs handling motor control, sensor I/O, and safety interlocks',
+      'Designed networking and communication layers between embedded Linux hosts and microcontroller subsystems (serial, I2C, SPI, TCP)',
+      'Helped establish the first manufacturing facility — wrote test fixtures, calibration procedures, and acceptance criteria for shipping scanners',
+      'Shipped hundreds of production scanners representing over $100M in product value',
+      'Hackathon project: built "Atlas on Neptune" — an MCP server that lets AI agents control a Lumafield scanner programmatically',
     ],
-    tags: ['Python', 'C/C++', 'Linux', 'OpenCV', 'STM32', 'Embedded Systems'],
+    tags: ['Python', 'C/C++', 'Linux', 'OpenCV', 'STM32', 'Embedded Systems', 'I2C/SPI/UART', 'PCB Bring-up'],
   },
   {
-    company: 'Enel Green Power',
+    company: 'Enel Green Power North America',
+    location: 'Andover, MA',
     role: 'Instrumentation & Controls Engineer',
-    period: 'May 2019 - Aug 2021',
-    progression: 'EE Intern (2019) → Full-time I&C Engineer (2021)',
-    description: 'Worked on a 1 GW hybrid wind and battery energy storage project. The kind of facility where a bad configuration can take out power for thousands of homes. Managed SCADA systems, automated testing with MATLAB, and kept very large machines spinning safely.',
+    period: 'May 2021 - Aug 2021',
+    progression: '',
+    description: 'Full-time I&C engineer on the Ranchland Wind + Battery Energy Storage System (BESS) project — a 1 GW hybrid renewable energy facility in Oklahoma. Responsible for SCADA configuration, control system integration, and commissioning support for one of the largest wind-storage hybrid projects in North America.',
     details: [
-      'SCADA system configuration and maintenance for wind turbines and battery storage',
-      'Automated testing and data analysis with MATLAB',
-      'Managed instrumentation across a utility-scale renewable energy facility',
-      'Started as an electrical engineering intern, came back full-time after graduating',
+      'Configured and maintained SCADA systems for wind turbine arrays and lithium-ion battery storage systems',
+      'Developed automated test scripts and data analysis tools in MATLAB for commissioning validation',
+      'Managed instrumentation databases and control system documentation across the project lifecycle',
+      'Coordinated with field teams during commissioning to troubleshoot sensor and communication issues',
     ],
-    tags: ['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage', 'Controls'],
+    tags: ['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage', 'Controls', 'Commissioning'],
+  },
+  {
+    company: 'Enel Green Power North America',
+    location: 'Andover, MA',
+    role: 'Electrical Engineering Intern',
+    period: 'May 2019 - Aug 2019',
+    progression: '',
+    description: 'Summer internship on the Roadrunner Solar + BESS project in New Mexico. Got hands-on with utility-scale solar and battery storage controls — the kind of systems where a misconfigured relay can trip an entire substation.',
+    details: [
+      'Supported I&C engineering on a utility-scale solar photovoltaic and battery energy storage facility',
+      'Assisted with SCADA point mapping, wiring diagrams, and instrumentation specifications',
+      'Built MATLAB scripts to automate data extraction and reporting from historian databases',
+      'First real exposure to industrial controls — learned the difference between lab projects and equipment that runs 24/7',
+    ],
+    tags: ['Solar', 'BESS', 'MATLAB', 'SCADA', 'Electrical Engineering'],
   },
 ];
 ---
@@ -62,6 +82,9 @@ const experience = [
                   <p class="text-accent text-sm">{job.role}</p>
                   {job.progression && (
                     <p class="text-gray-500 text-xs mt-1">{job.progression}</p>
+                  )}
+                  {job.location && (
+                    <p class="text-gray-600 text-xs mt-0.5">{job.location}</p>
                   )}
                 </div>
                 <span class="text-gray-500 text-sm whitespace-nowrap">{job.period}</span>
