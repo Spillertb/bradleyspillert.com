@@ -19,15 +19,17 @@ const experience = [
   },
   {
     company: 'Enel Green Power',
-    role: 'I&C Engineer',
+    role: 'Instrumentation & Controls Engineer',
     period: 'May 2019 - Aug 2021',
-    description: 'Instrumentation and controls engineer on a 1 GW hybrid wind and battery energy storage facility. Worked on SCADA systems, automated testing with MATLAB, and kept very large machines spinning safely.',
+    progression: 'EE Intern (2019) → Full-time I&C Engineer (2021)',
+    description: 'Worked on a 1 GW hybrid wind and battery energy storage project. The kind of facility where a bad configuration can take out power for thousands of homes. Managed SCADA systems, automated testing with MATLAB, and kept very large machines spinning safely.',
     details: [
       'SCADA system configuration and maintenance for wind turbines and battery storage',
       'Automated testing and data analysis with MATLAB',
       'Managed instrumentation across a utility-scale renewable energy facility',
+      'Started as an electrical engineering intern, came back full-time after graduating',
     ],
-    tags: ['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage'],
+    tags: ['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage', 'Controls'],
   },
 ];
 ---
@@ -96,13 +98,27 @@ const experience = [
         <div class="relative">
           <div class="timeline-dot top-2"></div>
           <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
               <div>
                 <h3 class="text-white text-xl font-semibold">UMass Amherst</h3>
                 <p class="text-accent text-sm">BS Computer Engineering</p>
+                <p class="text-gray-500 text-xs mt-1">Riccio College of Engineering</p>
               </div>
               <span class="text-gray-500 text-sm">Class of 2021</span>
             </div>
+            <details class="group">
+              <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
+                <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+                Highlights
+              </summary>
+              <ul class="mt-4 space-y-2">
+                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Capstone: Gyro Glove — wearable gesture controller for RC aircraft with custom PCBs and IMU</li>
+                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">HackUMass VIII — Won Best Hardware Hack with a 2-motor polar plotter</li>
+                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Pi Kappa Phi fraternity</li>
+              </ul>
+            </details>
           </div>
         </div>
       </div>

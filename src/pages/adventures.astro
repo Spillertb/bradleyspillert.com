@@ -4,37 +4,38 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const activities = [
   {
     title: 'Running',
-    description: 'Training for a half marathon. Not fast, but getting there. Strava profile coming soon.',
-    items: ['Half marathon training', 'Race results TBD'],
+    description: 'Training for a half marathon with my girlfriend. We run around Somerville and the Charles River. Still working on getting faster, but at least I show up.',
+    link: '#', // Strava link goes here
+    linkText: 'Strava (coming soon)',
   },
   {
     title: 'Skiing',
-    description: 'Ikon Pass holder. East coast roots, but always chasing western powder.',
+    description: 'Ikon Pass holder. Waterville Valley, Loon, Mount Snow, and wherever the snow is best that weekend. Went out to Brighton Resort in Utah last season.',
   },
   {
     title: 'Scuba Diving',
-    description: 'Advanced NAUI certified. There is something about being 80 feet underwater that resets your brain.',
+    description: 'Advanced NAUI certified. There is something about being 80 feet underwater that completely resets your brain.',
   },
   {
     title: 'Dodgeball',
-    description: 'Recreational dodgeball league. It is exactly as fun and chaotic as it sounds.',
+    description: 'Volo Sports league in the city. It is exactly as fun and chaotic as it sounds.',
   },
   {
     title: 'Go-Kart Racing',
-    description: 'Competitive indoor karting. Fastest way to feel like a Formula 1 driver without any of the talent.',
+    description: 'K1 Speed adult league. The fastest way to feel like a Formula 1 driver without any of the talent or money.',
   },
   {
     title: 'Hiking and Camping',
-    description: 'Northeast trails mostly, with the occasional longer trip out west.',
+    description: 'Acadia is the go-to. Northeast trails mostly, with the occasional trip out west. AllTrails and Gaia GPS on every hike.',
   },
 ];
 
 const hobbies = [
-  '3D printing (obviously)',
+  '3D printing (built my own CoreXY)',
   'Electronics and PCB design',
   'Knife collecting',
   'Quilting and sewing',
-  'Music — indie rock, folk rock, whatever sounds good',
+  'Music — Caamp, Mt. Joy, Rainbow Kitten Surprise, Band of Horses',
 ];
 ---
 
@@ -55,6 +56,9 @@ const hobbies = [
             <div class="p-6">
               <h3 class="text-white text-lg font-semibold mb-2">{activity.title}</h3>
               <p class="text-gray-400 text-sm leading-relaxed">{activity.description}</p>
+              {activity.link && (
+                <a href={activity.link} class="inline-block mt-3 text-accent text-xs hover:underline">{activity.linkText}</a>
+              )}
             </div>
           </div>
         ))}

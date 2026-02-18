@@ -12,6 +12,10 @@ const locations: Location[] = [
   { name: 'Santiago, Chile', lat: -33.45, lng: -70.67, note: 'Photos coming soon' },
   { name: 'Antigua, Guatemala', lat: 14.56, lng: -90.73, note: 'Photos coming soon' },
   { name: 'London, England', lat: 51.51, lng: -0.13, note: 'Photos coming soon' },
+  { name: 'Washington, DC', lat: 38.91, lng: -77.04, note: 'Photos coming soon' },
+  { name: 'San Diego, CA', lat: 32.72, lng: -117.16, note: 'Photos coming soon' },
+  { name: 'Salt Lake City, Utah', lat: 40.76, lng: -111.89, note: 'Brighton Resort' },
+  { name: 'Acadia, Maine', lat: 44.35, lng: -68.21, note: 'Photos coming soon' },
   // Add more locations here — just add to this array
 ];
 

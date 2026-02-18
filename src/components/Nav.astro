@@ -7,6 +7,8 @@ const links = [
   { href: '/travel', label: 'Travel' },
   { href: '/blog', label: 'Writing' },
 ];
+
+const currentPath = Astro.url.pathname;
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-gray-800/50">
@@ -18,7 +20,12 @@ const links = [
     <!-- Desktop nav -->
     <div class="hidden md:flex items-center gap-8">
       {links.map(({ href, label }) => (
-        <a href={href} class="text-gray-400 hover:text-white text-sm transition-colors">
+        <a href={href} class:list={[
+          "text-sm transition-colors",
+          currentPath === href || (href !== '/' && currentPath.startsWith(href))
+            ? "text-white font-medium"
+            : "text-gray-400 hover:text-white"
+        ]}>
           {label}
         </a>
       ))}
