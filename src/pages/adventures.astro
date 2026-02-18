@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const activities = [
+  {
+    title: 'Running',
+    description: 'Training for a half marathon. Not fast, but getting there. Strava profile coming soon.',
+    items: ['Half marathon training', 'Race results TBD'],
+  },
+  {
+    title: 'Skiing',
+    description: 'Ikon Pass holder. East coast roots, but always chasing western powder.',
+  },
+  {
+    title: 'Scuba Diving',
+    description: 'Advanced NAUI certified. There is something about being 80 feet underwater that resets your brain.',
+  },
+  {
+    title: 'Dodgeball',
+    description: 'Recreational dodgeball league. It is exactly as fun and chaotic as it sounds.',
+  },
+  {
+    title: 'Go-Kart Racing',
+    description: 'Competitive indoor karting. Fastest way to feel like a Formula 1 driver without any of the talent.',
+  },
+  {
+    title: 'Hiking and Camping',
+    description: 'Northeast trails mostly, with the occasional longer trip out west.',
+  },
+];
+
+const hobbies = [
+  '3D printing (obviously)',
+  'Electronics and PCB design',
+  'Knife collecting',
+  'Quilting and sewing',
+  'Music — indie rock, folk rock, whatever sounds good',
+];
+---
+
+<BaseLayout title="Adventures - Bradley Spillert">
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="section-heading fade-in">Beyond the Desk</h1>
+      <p class="text-gray-400 mb-12 max-w-2xl fade-in">
+        Engineering is the day job. The rest of the time I'm usually outside, underwater, or building something that has nothing to do with software.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-20">
+        {activities.map((activity) => (
+          <div class="fade-in bg-surface-raised border border-gray-800 rounded-xl overflow-hidden">
+            <div class="placeholder-image h-44">
+              <span>Photo coming soon</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-white text-lg font-semibold mb-2">{activity.title}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{activity.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Other hobbies -->
+      <div class="fade-in">
+        <h2 class="text-2xl font-semibold text-white mb-8">Other Things I Do</h2>
+        <div class="flex flex-wrap gap-3">
+          {hobbies.map((hobby) => (
+            <span class="px-4 py-2 bg-surface-raised border border-gray-800 rounded-lg text-sm text-gray-400">
+              {hobby}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

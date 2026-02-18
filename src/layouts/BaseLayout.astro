@@ -1,0 +1,47 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = 'Bradley Spillert', description = 'Engineer. Builder. Explorer.' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="min-h-screen">
+    <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.addEventListener('astro:page-load', () => {
+        document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+      });
+    </script>
+  </body>
+</html>

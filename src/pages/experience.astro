@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const experience = [
+  {
+    company: 'Lumafield',
+    role: 'Sr Software Engineer',
+    period: 'Aug 2021 - Apr 2026',
+    progression: 'Mechatronics Engineer → Embedded Software Engineer → Sr Software Engineer',
+    description: 'Technical lead for embedded software on industrial X-ray CT scanners. Built the software that controls these machines — device drivers, motion controllers, scientific cameras, sensors, X-ray generators. Wrote image acquisition pipelines with OpenCV, STM32 firmware, and worked on custom PCB designs.',
+    details: [
+      'Designed and maintained device drivers for scientific cameras, X-ray generators, motion stages, and environmental sensors',
+      'Built image acquisition and processing pipelines using OpenCV and custom algorithms',
+      'Developed STM32 firmware for custom control boards',
+      'Helped establish the first manufacturing facility and shipped hundreds of scanners',
+      'Python, C/C++, Linux — the usual embedded stack',
+    ],
+    tags: ['Python', 'C/C++', 'Linux', 'OpenCV', 'STM32', 'Embedded Systems'],
+  },
+  {
+    company: 'Enel Green Power',
+    role: 'I&C Engineer',
+    period: 'May 2019 - Aug 2021',
+    description: 'Instrumentation and controls engineer on a 1 GW hybrid wind and battery energy storage facility. Worked on SCADA systems, automated testing with MATLAB, and kept very large machines spinning safely.',
+    details: [
+      'SCADA system configuration and maintenance for wind turbines and battery storage',
+      'Automated testing and data analysis with MATLAB',
+      'Managed instrumentation across a utility-scale renewable energy facility',
+    ],
+    tags: ['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage'],
+  },
+];
+---
+
+<BaseLayout title="Experience - Bradley Spillert">
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="section-heading fade-in">Experience</h1>
+      
+      <div class="mb-8 fade-in">
+        <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/10 border border-accent/30 rounded-lg text-sm text-accent hover:bg-accent/20 transition-all">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          Download Resume (PDF coming soon)
+        </a>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative pl-8 md:pl-20">
+        <div class="timeline-line"></div>
+        
+        {experience.map((job, i) => (
+          <div class="relative mb-16 fade-in">
+            <div class="timeline-dot top-2"></div>
+            <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
+                <div>
+                  <h3 class="text-white text-xl font-semibold">{job.company}</h3>
+                  <p class="text-accent text-sm">{job.role}</p>
+                  {job.progression && (
+                    <p class="text-gray-500 text-xs mt-1">{job.progression}</p>
+                  )}
+                </div>
+                <span class="text-gray-500 text-sm whitespace-nowrap">{job.period}</span>
+              </div>
+              
+              <p class="text-gray-400 leading-relaxed mb-4">{job.description}</p>
+              
+              <details class="group">
+                <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
+                  <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                  More details
+                </summary>
+                <ul class="mt-4 space-y-2">
+                  {job.details.map((detail) => (
+                    <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">{detail}</li>
+                  ))}
+                </ul>
+              </details>
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                {job.tags.map((tag) => (
+                  <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Education -->
+      <div class="relative pl-8 md:pl-20 fade-in">
+        <div class="relative">
+          <div class="timeline-dot top-2"></div>
+          <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+              <div>
+                <h3 class="text-white text-xl font-semibold">UMass Amherst</h3>
+                <p class="text-accent text-sm">BS Computer Engineering</p>
+              </div>
+              <span class="text-gray-500 text-sm">Class of 2021</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,53 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/experience', label: 'Experience' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/adventures', label: 'Adventures' },
+  { href: '/travel', label: 'Travel' },
+  { href: '/blog', label: 'Writing' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-gray-800/50">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="text-white font-semibold text-lg tracking-tight hover:text-accent transition-colors">
+      BS
+    </a>
+    
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-8">
+      {links.map(({ href, label }) => (
+        <a href={href} class="text-gray-400 hover:text-white text-sm transition-colors">
+          {label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800/50 bg-surface/95 backdrop-blur-md">
+    <div class="px-6 py-4 flex flex-col gap-4">
+      {links.map(({ href, label }) => (
+        <a href={href} class="text-gray-400 hover:text-white text-sm transition-colors">
+          {label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+  });
+</script>

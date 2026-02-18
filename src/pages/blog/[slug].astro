@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export function getStaticPaths() {
+  // Add blog posts here as they're written
+  return [];
+}
+---
+
+<BaseLayout>
+  <article class="pt-32 pb-20 px-6">
+    <div class="max-w-3xl mx-auto prose prose-invert">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>
