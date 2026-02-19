@@ -4,109 +4,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Adventures - Bradley Spillert">
   <section class="pt-32 pb-20 px-6">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-3xl mx-auto">
       <h1 class="section-heading fade-in">Beyond the Desk</h1>
-      <p class="text-gray-400 mb-12 max-w-2xl fade-in">
-        Engineering is the day job. The rest of the time I'm usually outside, underwater, or building something that has nothing to do with software.
-      </p>
 
-      <!-- Mixed layout activities -->
-      <div class="grid md:grid-cols-3 gap-6 mb-20">
-        <!-- Running - wide -->
-        <div class="fade-in card md:col-span-2">
-          <div class="placeholder-image h-52">
-            <span>Photo coming soon</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-white text-lg font-semibold mb-2">Running</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Training for a half marathon with my girlfriend. We run around Somerville and the Charles River. Still working on getting faster, but at least I show up.
-            </p>
-          </div>
+      <div class="fade-in space-y-10 text-[15px] leading-relaxed">
+        <div>
+          <h3 class="text-white font-medium mb-2">Running</h3>
+          <p class="text-gray-400">
+            Training for a half marathon with my girlfriend. We run around Somerville and the Charles River most weeks. Still working on getting faster, but showing up is the hard part.
+          </p>
         </div>
 
-        <!-- Skiing - tall -->
-        <div class="fade-in card">
-          <div class="placeholder-image h-40">
-            <span>Photo coming soon</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-white text-lg font-semibold mb-2">Skiing</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              <a href="https://www.ikonpass.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Ikon Pass</a> holder. <a href="https://www.waterville.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Waterville Valley</a>, Loon, Mount Snow, and wherever the snow is best that weekend. Went out to Brighton Resort in Utah last season.
-            </p>
-          </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Skiing</h3>
+          <p class="text-gray-400">
+            Ikon Pass holder. Waterville Valley, Loon, Mount Snow, and wherever the snow is best that weekend. Made it out to Brighton Resort in Utah last season.
+          </p>
         </div>
 
-        <!-- Scuba -->
-        <div class="fade-in card">
-          <div class="placeholder-image h-36">
-            <span>Photo coming soon</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-white text-lg font-semibold mb-2">Scuba Diving</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              Advanced <a href="https://www.naui.org" target="_blank" rel="noopener" class="text-gray-300 hover:underline">NAUI</a> certified. There is something about being 80 feet underwater that completely resets your brain.
-            </p>
-          </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Scuba</h3>
+          <p class="text-gray-400">
+            Advanced NAUI certified. There is something about being 80 feet underwater that completely resets your brain.
+          </p>
         </div>
 
-        <!-- Hiking - wide -->
-        <div class="fade-in card md:col-span-2">
-          <div class="md:flex">
-            <div class="placeholder-image h-44 md:h-auto md:w-64 shrink-0">
-              <span>Photo coming soon</span>
-            </div>
-            <div class="p-6">
-              <h3 class="text-white text-lg font-semibold mb-2">Hiking and Camping</h3>
-              <p class="text-gray-400 text-sm leading-relaxed">
-                <a href="https://www.nps.gov/acad/" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Acadia</a> is the go-to. Northeast trails mostly, with the occasional trip out west. <a href="https://www.alltrails.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">AllTrails</a> and <a href="https://www.gaiagps.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Gaia GPS</a> on every hike.
-              </p>
-            </div>
-          </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Hiking</h3>
+          <p class="text-gray-400">
+            Acadia is the go-to. Northeast trails mostly, with the occasional trip out west. AllTrails and Gaia GPS on every hike.
+          </p>
         </div>
 
-        <!-- Dodgeball -->
-        <div class="fade-in card md:col-span-2">
-          <div class="p-6">
-            <h3 class="text-white text-lg font-semibold mb-2">Dodgeball</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              <a href="https://www.volosports.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Volo Sports</a> league in the city. It is exactly as fun and chaotic as it sounds.
-            </p>
-          </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Dodgeball</h3>
+          <p class="text-gray-400">
+            Volo Sports league in the city. Exactly as fun and chaotic as it sounds.
+          </p>
         </div>
 
-        <!-- Go-Kart -->
-        <div class="fade-in card">
-          <div class="p-6">
-            <h3 class="text-white text-lg font-semibold mb-2">Go-Kart Racing</h3>
-            <p class="text-gray-400 text-sm leading-relaxed">
-              <a href="https://www.k1speed.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">K1 Speed</a> adult league. The fastest way to feel like a Formula 1 driver without any of the talent or money.
-            </p>
-          </div>
+        <div>
+          <h3 class="text-white font-medium mb-2">Go-Kart Racing</h3>
+          <p class="text-gray-400">
+            K1 Speed adult league. The fastest way to feel like a Formula 1 driver without any of the talent or money.
+          </p>
         </div>
       </div>
 
-      <!-- Other hobbies -->
-      <div class="fade-in mb-16">
-        <h2 class="text-2xl font-semibold text-white mb-6">Other Things I Do</h2>
-        <ul class="space-y-2 text-gray-400 text-sm max-w-lg">
-          <li>3D printing (built my own CoreXY)</li>
-          <li>Electronics and PCB design</li>
-          <li>Knife collecting</li>
-          <li>Quilting and sewing (yes, really)</li>
-        </ul>
+      <div class="fade-in mt-16 pt-10 border-t border-white/[0.04]">
+        <h2 class="text-white font-medium mb-4">Other things</h2>
+        <p class="text-gray-500 text-[15px] leading-relaxed">
+          3D printing (built my own CoreXY), electronics and PCB design, knife collecting, quilting and sewing.
+        </p>
       </div>
 
-      <!-- Music -->
-      <div class="fade-in">
-        <h2 class="text-2xl font-semibold text-white mb-4">On Repeat</h2>
-        <p class="text-gray-400 text-sm leading-relaxed max-w-lg">
-          <a href="https://open.spotify.com/artist/3rMFotuRYPOmFVQJRVqagf" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Caamp</a>, 
-          <a href="https://open.spotify.com/artist/69tiO1fG8VWduDl3ji2qhI" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Mt. Joy</a>, 
-          <a href="https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Rainbow Kitten Surprise</a>, 
-          <a href="https://open.spotify.com/artist/0OdUWJ0sBjDrqHygGUXeCF" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Band of Horses</a> — 
-          that kind of thing.
+      <div class="fade-in mt-12">
+        <h2 class="text-white font-medium mb-3">On repeat</h2>
+        <p class="text-gray-500 text-[15px] leading-relaxed">
+          Caamp, Mt. Joy, Rainbow Kitten Surprise, Band of Horses -- that kind of thing.
         </p>
       </div>
     </div>

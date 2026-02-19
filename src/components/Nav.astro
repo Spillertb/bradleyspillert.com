@@ -1,6 +1,5 @@
 ---
 const links = [
-  { href: '/', label: 'Home' },
   { href: '/experience', label: 'Experience' },
   { href: '/projects', label: 'Projects' },
   { href: '/adventures', label: 'Adventures' },
@@ -11,20 +10,20 @@ const links = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl border-b border-gray-800/30">
-  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="/" class="text-white font-semibold text-lg tracking-tight hover:text-accent transition-colors">
-      BS
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-white/[0.04]">
+  <div class="max-w-3xl mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="/" class="text-white text-sm font-medium tracking-tight hover:text-accent transition-colors">
+      Bradley Spillert
     </a>
     
     <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-8">
+    <div class="hidden md:flex items-center gap-7">
       {links.map(({ href, label }) => (
         <a href={href} class:list={[
-          "text-sm transition-colors",
+          "text-[13px] transition-colors",
           currentPath === href || (href !== '/' && currentPath.startsWith(href))
-            ? "text-white font-medium"
-            : "text-gray-400 hover:text-white"
+            ? "text-white"
+            : "text-gray-500 hover:text-gray-300"
         ]}>
           {label}
         </a>
@@ -32,16 +31,16 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile menu button -->
-    <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white" aria-label="Menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="mobile-menu-btn" class="md:hidden text-gray-500 hover:text-white" aria-label="Menu">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
     </button>
   </div>
 
   <!-- Mobile nav -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800/50 bg-surface/95 backdrop-blur-md">
-    <div class="px-6 py-4 flex flex-col gap-4">
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/[0.04] bg-surface/95 backdrop-blur-md">
+    <div class="px-6 py-4 flex flex-col gap-3">
       {links.map(({ href, label }) => (
         <a href={href} class="text-gray-400 hover:text-white text-sm transition-colors">
           {label}

@@ -4,174 +4,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Experience - Bradley Spillert">
   <section class="pt-32 pb-20 px-6">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-3xl mx-auto">
       <h1 class="section-heading fade-in">Experience</h1>
-      
-      <div class="mb-8 fade-in">
-        <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 bg-accent/10 border border-accent/30 rounded-lg text-sm text-accent hover:bg-accent/20 transition-all">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          Download Resume (PDF coming soon)
-        </a>
-      </div>
 
-      <!-- Timeline -->
-      <div class="relative pl-8 md:pl-20">
-        <div class="timeline-line"></div>
-        
+      <div class="space-y-16">
         <!-- Lumafield -->
-        <div class="relative mb-16 fade-in">
-          <div class="timeline-dot top-2"></div>
-          <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-              <div>
-                <h3 class="text-white text-xl font-semibold"><a href="https://www.lumafield.com" target="_blank" rel="noopener" class="hover:underline">Lumafield</a></h3>
-                <p class="text-accent text-sm">Sr Software Engineer</p>
-                <p class="text-gray-500 text-xs mt-1">Mechatronics Engineer &rarr; Embedded Software Engineer &rarr; Sr Software Engineer</p>
-                <p class="text-gray-600 text-xs mt-0.5">Cambridge, MA</p>
-              </div>
-              <span class="text-gray-500 text-sm whitespace-nowrap">Aug 2021 - Apr 2026</span>
+        <div class="fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+            <div>
+              <h3 class="text-white text-lg font-medium">
+                <a href="https://www.lumafield.com" target="_blank" rel="noopener">Lumafield</a>
+              </h3>
+              <p class="text-gray-500 text-sm">Sr Software Engineer &middot; Cambridge, MA</p>
             </div>
-            
-            <p class="text-gray-400 leading-relaxed mb-4">
-              Joined as the company's first mechatronics hire and grew into the technical lead for embedded software. Worked on both the <a href="https://www.lumafield.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Neptune and Triton</a> X-ray CT scanner platforms from early prototype through full production. The job was everything from writing device drivers to standing up a manufacturing line.
+            <span class="text-gray-600 text-sm">2021 -- 2026</span>
+          </div>
+          <div class="text-gray-400 text-[15px] leading-relaxed space-y-3">
+            <p>
+              Joined as the first mechatronics hire and grew into the tech lead for embedded software. Worked on both scanner platforms -- Neptune and Triton -- from breadboard prototypes to shipping production units. The job was everything from writing device drivers for scientific X-ray cameras to standing up a manufacturing line.
             </p>
-            
-            <details class="group">
-              <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
-                <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                More details
-              </summary>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Led embedded software development across two scanner platforms (Neptune and Triton) — from breadboard prototypes to shipping production units</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Wrote and maintained drivers and APIs for motion controllers, scientific X-ray cameras, high-voltage generators, and environmental sensors (Python, C/C++)</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Built image acquisition and processing pipelines that run the actual CT scans — frame capture, reconstruction preprocessing, and quality validation (OpenCV, NumPy)</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Developed STM32 firmware in C for custom control PCBs handling motor control, sensor I/O, and safety interlocks</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Designed networking and communication layers between embedded Linux hosts and microcontroller subsystems (serial, I2C, SPI, TCP)</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Helped establish the first manufacturing facility — wrote test fixtures, calibration procedures, and acceptance criteria for shipping scanners</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Shipped hundreds of production scanners representing over $100M in product value</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Hackathon project: built "Atlas on Neptune" — an MCP server that lets AI agents control a Lumafield scanner programmatically</li>
-              </ul>
-            </details>
-
-            <div class="flex flex-wrap gap-2 mt-4">
-              {['Python', 'C/C++', 'Linux', 'OpenCV', 'STM32', 'Embedded Systems', 'I2C/SPI/UART', 'PCB Bring-up'].map((tag) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
+            <p>
+              Shipped hundreds of production scanners. Wrote firmware in C for custom STM32 control boards, built image acquisition pipelines in Python and OpenCV, and designed the networking layer between embedded Linux hosts and microcontroller subsystems.
+            </p>
+            <p class="text-gray-500 text-sm">
+              Python, C/C++, Linux, OpenCV, STM32, I2C/SPI/UART, PCB bring-up
+            </p>
           </div>
         </div>
 
         <!-- Enel FT -->
-        <div class="relative mb-16 fade-in">
-          <div class="timeline-dot top-2"></div>
-          <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-              <div>
-                <h3 class="text-white text-xl font-semibold"><a href="https://www.enelgreenpower.com" target="_blank" rel="noopener" class="hover:underline">Enel Green Power North America</a></h3>
-                <p class="text-accent text-sm">Instrumentation & Controls Engineer</p>
-                <p class="text-gray-600 text-xs mt-0.5">Andover, MA</p>
-              </div>
-              <span class="text-gray-500 text-sm whitespace-nowrap">May 2021 - Aug 2021</span>
+        <div class="fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+            <div>
+              <h3 class="text-white text-lg font-medium">
+                <a href="https://www.enelgreenpower.com" target="_blank" rel="noopener">Enel Green Power</a>
+              </h3>
+              <p class="text-gray-500 text-sm">I&C Engineer &middot; Andover, MA</p>
             </div>
-            
-            <p class="text-gray-400 leading-relaxed mb-4">
-              Full-time I&C engineer on the Ranchland Wind + Battery Energy Storage System (BESS) project — a 1 GW hybrid renewable energy facility in Oklahoma. Responsible for SCADA configuration, control system integration, and commissioning support for one of the largest wind-storage hybrid projects in North America.
+            <span class="text-gray-600 text-sm">2021</span>
+          </div>
+          <div class="text-gray-400 text-[15px] leading-relaxed space-y-3">
+            <p>
+              Instrumentation and controls on the Ranchland project -- a 1 GW wind and battery storage facility in Oklahoma. SCADA configuration, control system integration, and commissioning support for one of the largest wind-storage hybrids in North America.
             </p>
-            
-            <details class="group">
-              <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
-                <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                More details
-              </summary>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Configured and maintained SCADA systems for wind turbine arrays and lithium-ion battery storage systems</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Developed automated test scripts and data analysis tools in MATLAB for commissioning validation</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Managed instrumentation databases and control system documentation across the project lifecycle</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Coordinated with field teams during commissioning to troubleshoot sensor and communication issues</li>
-              </ul>
-            </details>
-
-            <div class="flex flex-wrap gap-2 mt-4">
-              {['SCADA', 'MATLAB', 'Wind Energy', 'Battery Storage', 'Controls', 'Commissioning'].map((tag) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
+            <p class="text-gray-500 text-sm">
+              SCADA, MATLAB, wind energy, battery storage, controls
+            </p>
           </div>
         </div>
 
         <!-- Enel Intern -->
-        <div class="relative mb-16 fade-in">
-          <div class="timeline-dot top-2"></div>
-          <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-              <div>
-                <h3 class="text-white text-xl font-semibold"><a href="https://www.enelgreenpower.com" target="_blank" rel="noopener" class="hover:underline">Enel Green Power North America</a></h3>
-                <p class="text-accent text-sm">Electrical Engineering Intern</p>
-                <p class="text-gray-600 text-xs mt-0.5">Andover, MA</p>
-              </div>
-              <span class="text-gray-500 text-sm whitespace-nowrap">May 2019 - Aug 2019</span>
+        <div class="fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+            <div>
+              <h3 class="text-white text-lg font-medium">
+                <a href="https://www.enelgreenpower.com" target="_blank" rel="noopener">Enel Green Power</a>
+              </h3>
+              <p class="text-gray-500 text-sm">EE Intern &middot; Andover, MA</p>
             </div>
-            
-            <p class="text-gray-400 leading-relaxed mb-4">
-              Summer internship on the Roadrunner Solar + BESS project in New Mexico. Got hands-on with utility-scale solar and battery storage controls — the kind of systems where a misconfigured relay can trip an entire substation.
+            <span class="text-gray-600 text-sm">2019</span>
+          </div>
+          <div class="text-gray-400 text-[15px] leading-relaxed space-y-3">
+            <p>
+              Summer internship on the Roadrunner solar and battery storage project in New Mexico. First real exposure to industrial controls -- the kind of systems where a misconfigured relay trips an entire substation.
             </p>
-            
-            <details class="group">
-              <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
-                <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                More details
-              </summary>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Supported I&C engineering on a utility-scale solar photovoltaic and battery energy storage facility</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Assisted with SCADA point mapping, wiring diagrams, and instrumentation specifications</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Built MATLAB scripts to automate data extraction and reporting from historian databases</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">First real exposure to industrial controls — learned the difference between lab projects and equipment that runs 24/7</li>
-              </ul>
-            </details>
-
-            <div class="flex flex-wrap gap-2 mt-4">
-              {['Solar', 'BESS', 'MATLAB', 'SCADA', 'Electrical Engineering'].map((tag) => (
-                <span class="tag">{tag}</span>
-              ))}
-            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Education -->
-      <div class="relative pl-8 md:pl-20 fade-in">
-        <div class="relative">
-          <div class="timeline-dot top-2"></div>
-          <div class="bg-surface-raised border border-gray-800 rounded-xl p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
-              <div>
-                <h3 class="text-white text-xl font-semibold"><a href="https://www.umass.edu" target="_blank" rel="noopener" class="hover:underline">UMass Amherst</a></h3>
-                <p class="text-accent text-sm">BS Computer Engineering</p>
-                <p class="text-gray-500 text-xs mt-1"><a href="https://www.umass.edu/engineering" target="_blank" rel="noopener" class="hover:underline">Riccio College of Engineering</a></p>
-              </div>
-              <span class="text-gray-500 text-sm">Class of 2021</span>
+        <!-- Education -->
+        <div class="fade-in pt-8 border-t border-white/[0.04]">
+          <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-3">
+            <div>
+              <h3 class="text-white text-lg font-medium">
+                <a href="https://www.umass.edu" target="_blank" rel="noopener">UMass Amherst</a>
+              </h3>
+              <p class="text-gray-500 text-sm">BS Computer Engineering</p>
             </div>
-            <details class="group">
-              <summary class="text-accent text-sm cursor-pointer hover:underline list-none flex items-center gap-1">
-                <svg class="w-4 h-4 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-                Highlights
-              </summary>
-              <ul class="mt-4 space-y-2">
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800">Capstone: Gyro Glove — wearable gesture controller for RC aircraft with custom PCBs and IMU</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800"><a href="https://hackumass.com" target="_blank" rel="noopener" class="text-gray-300 hover:underline">HackUMass</a> VIII — Won Best Hardware Hack with a 2-motor polar plotter</li>
-                <li class="text-gray-400 text-sm pl-4 border-l border-gray-800"><a href="https://www.pikappaphi.org" target="_blank" rel="noopener" class="text-gray-300 hover:underline">Pi Kappa Phi</a> fraternity</li>
-              </ul>
-            </details>
+            <span class="text-gray-600 text-sm">2021</span>
+          </div>
+          <div class="text-gray-400 text-[15px] leading-relaxed space-y-2">
+            <p>
+              Capstone: Gyro Glove -- a wearable gesture controller for RC aircraft. Tilt your hand, fly the plane. Won Best Hardware Hack at HackUMass with a polar plotter built in 36 hours.
+            </p>
           </div>
         </div>
       </div>

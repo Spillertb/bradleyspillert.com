@@ -11,50 +11,39 @@
   }
 
   body {
-    @apply bg-surface text-gray-200 font-sans;
+    @apply bg-surface text-gray-300 font-sans;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   ::selection {
-    @apply bg-accent/30 text-white;
+    @apply bg-accent/20 text-white;
+  }
+
+  a {
+    @apply text-gray-200 transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-accent;
   }
 }
 
 @layer components {
   .section-heading {
-    @apply text-3xl md:text-4xl font-semibold text-white mb-12 tracking-tight;
-  }
-
-  .placeholder-image {
-    @apply bg-surface-overlay border border-gray-800/60 rounded-lg flex items-center justify-center text-gray-600 text-sm italic;
-  }
-
-  .card {
-    @apply bg-surface-raised border border-gray-800/70 rounded-xl overflow-hidden transition-all duration-300;
-  }
-
-  .card:hover {
-    @apply border-gray-700/80;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-  }
-
-  .skill-pill {
-    @apply px-3 py-1.5 bg-surface-overlay border border-gray-800/60 rounded-full text-xs text-gray-400 transition-colors duration-200;
-  }
-
-  .skill-pill:hover {
-    @apply border-accent/30 text-gray-300;
+    @apply text-2xl font-semibold text-white mb-10 tracking-tight;
   }
 
   .tag {
-    @apply px-2.5 py-1 bg-surface border border-gray-800/60 rounded text-xs text-gray-500;
+    @apply px-2 py-0.5 bg-surface-overlay border border-gray-800/50 rounded text-xs text-gray-500;
   }
 }
 
-/* Fade in animation */
+/* Fade in animation — used sparingly */
 .fade-in {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .fade-in.visible {
@@ -62,22 +51,5 @@
   transform: translateY(0);
 }
 
-/* Staggered fade-in delays */
-.fade-in:nth-child(2) { transition-delay: 0.1s; }
-.fade-in:nth-child(3) { transition-delay: 0.2s; }
-.fade-in:nth-child(4) { transition-delay: 0.3s; }
-
-/* Timeline line */
-.timeline-line {
-  @apply absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-gray-800 to-transparent;
-}
-
-.timeline-dot {
-  @apply absolute left-[-4px] md:left-[29px] w-2 h-2 rounded-full bg-accent;
-  box-shadow: 0 0 8px rgba(200, 168, 124, 0.4);
-}
-
-/* Subtle glow for accent elements */
-.accent-glow {
-  box-shadow: 0 0 20px rgba(200, 168, 124, 0.1);
-}
+.fade-in:nth-child(2) { transition-delay: 0.08s; }
+.fade-in:nth-child(3) { transition-delay: 0.16s; }

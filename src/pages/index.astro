@@ -2,119 +2,58 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Bradley Spillert" description="Engineer. Builder. Explorer.">
-  <!-- Hero -->
-  <section class="pt-36 md:pt-44 pb-24 px-6 relative">
-    <!-- Subtle background gradient -->
-    <div class="absolute inset-0 bg-gradient-to-b from-accent/[0.03] via-transparent to-transparent pointer-events-none"></div>
-    <div class="max-w-6xl mx-auto relative">
+<BaseLayout title="Bradley Spillert">
+  <section class="pt-32 md:pt-40 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
       <div class="fade-in">
-        <p class="text-accent text-sm font-medium tracking-wider uppercase mb-6">Engineer / Builder / Explorer</p>
-        <h1 class="text-6xl md:text-8xl font-bold text-white tracking-tight leading-[1.05] mb-8">
-          Bradley<br />Spillert
+        <h1 class="text-4xl md:text-5xl font-semibold text-white tracking-tight leading-tight mb-6">
+          Bradley Spillert
         </h1>
-        <p class="text-xl md:text-2xl text-gray-300 mb-4 max-w-2xl leading-relaxed">
-          I build things that move.
+        <p class="text-gray-400 text-lg leading-relaxed max-w-xl mb-4">
+          I build things that move -- drones, industrial robots, X-ray scanners. If it has a microcontroller and does something interesting in the real world, I probably want to work on it.
         </p>
-        <p class="text-gray-500 text-lg max-w-2xl leading-relaxed">
-          Drones, industrial robots, X-ray scanners — if it has a microcontroller and does something interesting in the real world, that's where I want to be.
-        </p>
-        <p class="text-gray-600 text-sm mt-4">Somerville, MA</p>
-      </div>
-      <div class="flex flex-wrap gap-4 mt-10 fade-in">
-        <a href="/experience"
-          class="px-6 py-3 bg-accent/10 border border-accent/30 rounded-lg text-sm text-accent hover:bg-accent/20 hover:border-accent/50 transition-all duration-300 accent-glow">
-          View Experience
-        </a>
-        <a href="https://github.com/spillertb" target="_blank" rel="noopener"
-          class="px-6 py-3 bg-surface-overlay border border-gray-700 rounded-lg text-sm text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-300">
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/bradley-spillert" target="_blank" rel="noopener"
-          class="px-6 py-3 bg-surface-overlay border border-gray-700 rounded-lg text-sm text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-300">
-          LinkedIn
-        </a>
+        <p class="text-gray-500 text-sm">Somerville, MA</p>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-2 gap-16 items-start">
-        <div class="fade-in">
-          <h2 class="section-heading">About</h2>
-          <div class="space-y-5 text-gray-400 leading-relaxed">
-            <p>
-              I spent the last four-plus years at <a href="https://www.lumafield.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-accent transition-colors">Lumafield</a> as a technical lead on their embedded software team, building industrial X-ray CT scanners from the ground up. Device drivers, motion controllers, scientific cameras, image acquisition pipelines — the full stack of getting complex hardware to work reliably.
-            </p>
-            <p>
-              Before that, I worked on utility-scale wind and battery energy storage at <a href="https://www.enelgreenpower.com" target="_blank" rel="noopener" class="text-gray-300 hover:text-accent transition-colors">Enel Green Power</a>, automating controls for a 1 GW hybrid facility.
-            </p>
-            <p>
-              Right now I'm building open-source flight control software for drones, training for a half marathon, and looking for the next thing worth building.
-            </p>
-          </div>
-        </div>
-        <div class="fade-in">
-          <!-- Skills grouped by category -->
-          <div class="space-y-6">
-            <div>
-              <h3 class="text-xs uppercase tracking-wider text-gray-600 mb-3">Languages</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-pill">Python</span>
-                <span class="skill-pill">C/C++</span>
-                <span class="skill-pill">TypeScript</span>
-                <span class="skill-pill">Embedded C</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xs uppercase tracking-wider text-gray-600 mb-3">Hardware</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-pill">STM32</span>
-                <span class="skill-pill">PCB Design</span>
-                <span class="skill-pill">I2C / SPI / UART</span>
-                <span class="skill-pill">ArduPilot</span>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-xs uppercase tracking-wider text-gray-600 mb-3">Software</h3>
-              <div class="flex flex-wrap gap-2">
-                <span class="skill-pill">Linux</span>
-                <span class="skill-pill">OpenCV</span>
-                <span class="skill-pill">React</span>
-                <span class="skill-pill">Three.js</span>
-                <span class="skill-pill">Git</span>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section class="pb-24 px-6">
+    <div class="max-w-3xl mx-auto">
+      <div class="fade-in space-y-5 text-gray-400 leading-relaxed">
+        <p>
+          I spent the last four-plus years at <a href="https://www.lumafield.com" target="_blank" rel="noopener">Lumafield</a> as a technical lead on their embedded software team, shipping industrial X-ray CT scanners from early prototype through production. Device drivers, motion controllers, scientific cameras, image acquisition -- the kind of work where your code has to survive being bolted to a machine that weighs a thousand pounds.
+        </p>
+        <p>
+          Before that, I was at <a href="https://www.enelgreenpower.com" target="_blank" rel="noopener">Enel Green Power</a> doing controls work on a 1 GW wind and battery storage facility in Oklahoma.
+        </p>
+        <p>
+          Right now I'm building <a href="https://github.com/spillertb/flight-software">open-source flight control software</a> for drones, training for a half marathon, and figuring out what to work on next.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Currently -->
-  <section class="py-20 px-6 bg-surface-raised">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="section-heading fade-in">Currently</h2>
-      <div class="space-y-0 max-w-2xl">
-        <div class="fade-in flex items-baseline gap-4 py-4 border-b border-gray-800/50">
-          <span class="text-gray-600 text-sm shrink-0 w-28 uppercase tracking-wider text-xs">Building</span>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            <a href="https://github.com/spillertb/flight-software" target="_blank" rel="noopener" class="text-accent hover:underline">flight-software</a> — an open source ground control station for <a href="https://ardupilot.org" target="_blank" rel="noopener" class="text-gray-300 hover:text-accent transition-colors">ArduPilot</a> drones. React, TypeScript, CesiumJS.
+  <section class="pb-24 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-sm uppercase tracking-wider text-gray-600 mb-6 fade-in">Now</h2>
+      <div class="fade-in space-y-4 text-sm">
+        <div class="flex gap-4 py-3 border-b border-white/[0.04]">
+          <span class="text-gray-600 shrink-0 w-24">Building</span>
+          <p class="text-gray-400">
+            <a href="https://github.com/spillertb/flight-software" target="_blank" rel="noopener" class="text-gray-300">flight-software</a> -- ground control station for ArduPilot drones. React, TypeScript, CesiumJS.
           </p>
         </div>
-        <div class="fade-in flex items-baseline gap-4 py-4 border-b border-gray-800/50">
-          <span class="text-gray-600 text-sm shrink-0 w-28 uppercase tracking-wider text-xs">Training</span>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Half marathon prep. Slowly getting faster, mostly just trying not to injure myself.
+        <div class="flex gap-4 py-3 border-b border-white/[0.04]">
+          <span class="text-gray-600 shrink-0 w-24">Training</span>
+          <p class="text-gray-400">
+            Half marathon. Slowly getting faster, mostly trying not to get injured.
           </p>
         </div>
-        <div class="fade-in flex items-baseline gap-4 py-4">
-          <span class="text-gray-600 text-sm shrink-0 w-28 uppercase tracking-wider text-xs">Open to work</span>
-          <p class="text-gray-400 text-sm leading-relaxed">
-            Looking for my next role — embedded systems, robotics, autonomy, anything where software meets the physical world.
-            <a href="mailto:bradleyspillert@gmail.com" class="text-accent hover:underline ml-1">Reach out</a>
+        <div class="flex gap-4 py-3">
+          <span class="text-gray-600 shrink-0 w-24">Open to</span>
+          <p class="text-gray-400">
+            Embedded systems, robotics, autonomy -- anything where software meets the physical world.
+            <a href="mailto:bradleyspillert@gmail.com" class="text-gray-300 ml-1">Say hi.</a>
           </p>
         </div>
       </div>

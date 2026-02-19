@@ -5,41 +5,23 @@ import Globe from '../components/Globe';
 
 <BaseLayout title="Travel - Bradley Spillert">
   <section class="pt-32 pb-20 px-6">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-3xl mx-auto">
       <h1 class="section-heading fade-in">Where I've Been</h1>
-      <p class="text-gray-400 mb-12 max-w-2xl fade-in">
-        Drag to spin, scroll to zoom. Click a marker for details. More pins and photos coming as I dig through my camera roll.
+      <p class="text-gray-500 mb-10 fade-in text-[15px]">
+        Drag to spin, scroll to zoom. More pins coming as I dig through my camera roll.
       </p>
-      
-      <div class="fade-in rounded-xl border border-gray-800 overflow-hidden bg-surface-raised">
+    </div>
+    
+    <div class="max-w-4xl mx-auto fade-in">
+      <div class="rounded-lg border border-white/[0.04] overflow-hidden bg-surface-raised">
         <Globe client:only="react" />
       </div>
+    </div>
 
-      <div class="mt-12 grid md:grid-cols-3 gap-6 fade-in">
-        <div class="card">
-          <div class="placeholder-image h-40">
-            <span>Santiago photos coming soon</span>
-          </div>
-          <div class="p-4">
-            <h3 class="text-white font-medium">Santiago, Chile</h3>
-          </div>
-        </div>
-        <div class="card">
-          <div class="placeholder-image h-40">
-            <span>Guatemala photos coming soon</span>
-          </div>
-          <div class="p-4">
-            <h3 class="text-white font-medium">Antigua, Guatemala</h3>
-          </div>
-        </div>
-        <div class="card">
-          <div class="placeholder-image h-40">
-            <span>London photos coming soon</span>
-          </div>
-          <div class="p-4">
-            <h3 class="text-white font-medium">London, England</h3>
-          </div>
-        </div>
+    <div class="max-w-3xl mx-auto mt-12 fade-in">
+      <div class="space-y-3 text-sm text-gray-500">
+        <p>Santiago and the Atacama Desert, Chile. Antigua, Guatemala. Patagonia. London. Most of the northeast US.</p>
+        <p>Photos eventually.</p>
       </div>
     </div>
   </section>
