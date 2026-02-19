@@ -32,7 +32,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </p>
           <div class="flex flex-wrap gap-2 mt-4">
             {['React', 'TypeScript', 'CesiumJS', 'Electron', 'ArduPilot'].map((tag) => (
-              <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+              <span class="tag">{tag}</span>
             ))}
           </div>
         </div>
@@ -40,7 +40,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Other projects - staggered grid -->
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="fade-in group bg-surface-raised border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all">
+        <div class="fade-in group card">
           <div class="placeholder-image h-44">
             <span>Image coming soon</span>
           </div>
@@ -51,13 +51,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
               {['ArduPilot', 'ELRS', 'FPV', 'Autonomous Flight'].map((tag) => (
-                <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <div class="fade-in group bg-surface-raised border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all md:mt-8">
+        <div class="fade-in group card md:mt-8">
           <div class="placeholder-image h-36">
             <span>Image coming soon</span>
           </div>
@@ -68,13 +68,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
               {['MAVLink', 'ExpressLRS', 'Telemetry', 'Technical Writing'].map((tag) => (
-                <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <div class="fade-in group bg-surface-raised border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all">
+        <div class="fade-in group card">
           <div class="placeholder-image h-40">
             <span>Image coming soon</span>
           </div>
@@ -85,13 +85,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
               {['Fusion 360', 'Marlin', '3D Printing', 'Mechanical Design'].map((tag) => (
-                <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <div class="fade-in group bg-surface-raised border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all md:mt-4">
+        <div class="fade-in group card md:mt-4">
           <div class="placeholder-image h-48">
             <span>Image coming soon</span>
           </div>
@@ -102,13 +102,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </p>
             <div class="flex flex-wrap gap-2 mt-4">
               {['PCB Design', 'IMU', 'Embedded C', 'Wireless'].map((tag) => (
-                <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                <span class="tag">{tag}</span>
               ))}
             </div>
           </div>
         </div>
 
-        <div class="fade-in group bg-surface-raised border border-gray-800 rounded-xl overflow-hidden hover:border-gray-700 transition-all md:col-span-2">
+        <div class="fade-in group card md:col-span-2">
           <div class="md:flex">
             <div class="placeholder-image h-44 md:h-auto md:w-72 shrink-0">
               <span>Image coming soon</span>
@@ -120,7 +120,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
                 {['Hackathon', 'Stepper Motors', 'Arduino', 'Mechanical Design'].map((tag) => (
-                  <span class="px-2.5 py-1 bg-surface border border-gray-800 rounded text-xs text-gray-500">{tag}</span>
+                  <span class="tag">{tag}</span>
                 ))}
               </div>
             </div>

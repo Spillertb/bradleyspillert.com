@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   html {
@@ -25,7 +25,28 @@
   }
 
   .placeholder-image {
-    @apply bg-surface-overlay border border-gray-800 rounded-lg flex items-center justify-center text-gray-500 text-sm;
+    @apply bg-surface-overlay border border-gray-800/60 rounded-lg flex items-center justify-center text-gray-600 text-sm italic;
+  }
+
+  .card {
+    @apply bg-surface-raised border border-gray-800/70 rounded-xl overflow-hidden transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply border-gray-700/80;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .skill-pill {
+    @apply px-3 py-1.5 bg-surface-overlay border border-gray-800/60 rounded-full text-xs text-gray-400 transition-colors duration-200;
+  }
+
+  .skill-pill:hover {
+    @apply border-accent/30 text-gray-300;
+  }
+
+  .tag {
+    @apply px-2.5 py-1 bg-surface border border-gray-800/60 rounded text-xs text-gray-500;
   }
 }
 
@@ -41,11 +62,22 @@
   transform: translateY(0);
 }
 
+/* Staggered fade-in delays */
+.fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in:nth-child(4) { transition-delay: 0.3s; }
+
 /* Timeline line */
 .timeline-line {
-  @apply absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gray-800;
+  @apply absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent/40 via-gray-800 to-transparent;
 }
 
 .timeline-dot {
   @apply absolute left-[-4px] md:left-[29px] w-2 h-2 rounded-full bg-accent;
+  box-shadow: 0 0 8px rgba(200, 168, 124, 0.4);
+}
+
+/* Subtle glow for accent elements */
+.accent-glow {
+  box-shadow: 0 0 20px rgba(200, 168, 124, 0.1);
 }
